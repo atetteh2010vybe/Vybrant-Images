@@ -1,0 +1,113 @@
+<div id="vbb" class="vbb">
+<style>
+.vbb{font-family:'Instrument Sans',Arial,sans-serif;color:#141414;-webkit-font-smoothing:antialiased}
+.vbb *{box-sizing:border-box}
+.vbb a{color:inherit;text-decoration:none}
+.vbb .w{max-width:1200px;margin:0 auto;padding:0 32px}
+.vbb .eb{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#8A5A24}
+.vbb .hero{background:#F7F2EA;padding:72px 0 40px}
+.vbb h1{font-family:inherit;font-size:56px;line-height:1.04;letter-spacing:-.02em;font-weight:600;margin:14px 0 16px;max-width:760px;color:#141414}
+.vbb .lede{font-size:18px;line-height:1.55;color:#5C5852;margin:0 0 32px;max-width:620px}
+.vbb .tb{display:flex;align-items:center;gap:16px}
+.vbb .chips{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;flex:1;padding-bottom:2px}
+.vbb .chips::-webkit-scrollbar{display:none}
+.vbb .chip{flex:none;height:40px;padding:0 16px;border-radius:999px;font-family:inherit;font-size:14px;font-weight:600;cursor:pointer;white-space:nowrap;background:#fff;color:#141414;border:1px solid #DDD3C4;transition:background .2s,color .2s}
+.vbb .chip:hover{border-color:#141414}
+.vbb .chip[aria-pressed="true"]{background:#141414;color:#fff;border-color:#141414}
+.vbb .srch{width:240px;height:44px;border-radius:999px;border:1px solid #DDD3C4;background:#fff;padding:0 18px;font-family:inherit;font-size:15px;color:#141414}
+.vbb .srch:focus{outline:2px solid #141414;outline-offset:1px}
+.vbb .img{overflow:hidden;background:#EFE7DA}
+.vbb .img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.vbb .card:hover .img img{transform:scale(1.04)}
+.vbb .card:hover .ct,.vbb .si:hover .st{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px}
+.vbb .cat{font-size:12px;color:#8A5A24;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+.vbb .dt{font-size:14px;color:#8C857B}
+.vbb .feat{display:grid;grid-template-columns:1.55fr 1fr;gap:40px;align-items:start;padding-top:56px}
+.vbb .fh{font-size:34px;line-height:1.15;letter-spacing:-.015em;font-weight:600;margin:0 0 12px;color:#141414;font-family:inherit}
+.vbb .fx{font-size:17px;line-height:1.6;color:#5C5852;margin:0 0 16px}
+.vbb .more{font-weight:600;font-size:15px;border-bottom:1.5px solid #141414;padding-bottom:2px}
+.vbb .tag{background:#141414;color:#fff;font-weight:600;padding:4px 10px;border-radius:999px;font-size:13px}
+.vbb .sh{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#8C857B;padding-bottom:14px;border-bottom:1px solid #141414}
+.vbb .si{display:grid;grid-template-columns:112px 1fr;gap:16px;padding:20px 0;border-bottom:1px solid #EEE8DF;align-items:start}
+.vbb .st{font-size:17px;line-height:1.3;font-weight:600;margin:6px 0}
+.vbb .gh{display:flex;align-items:baseline;justify-content:space-between;border-bottom:1px solid #141414;padding-bottom:14px;margin:56px 0 32px}
+.vbb .gh h2{font-size:24px;font-weight:600;margin:0;letter-spacing:-.01em;color:#141414;font-family:inherit}
+.vbb .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px 28px}
+.vbb .ct{font-size:20px;line-height:1.28;font-weight:600;margin:8px 0 10px;color:#141414;font-family:inherit}
+.vbb .c2{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.vbb .lm{display:block;margin:48px auto 0;height:48px;padding:0 28px;border-radius:999px;border:1px solid #141414;background:#fff;font-family:inherit;font-size:15px;font-weight:600;cursor:pointer;color:#141414}
+.vbb .lm:hover{background:#141414;color:#fff}
+.vbb .cta{display:grid;grid-template-columns:1.4fr 1fr;gap:32px;align-items:center;background:#141414;color:#fff;border-radius:20px;padding:44px 48px;margin:72px 0}
+.vbb .cta .eb{color:#E0B284}
+.vbb .cta .q{font-size:30px;line-height:1.2;font-weight:600;letter-spacing:-.01em;margin-top:10px}
+.vbb .btns{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+.vbb .b1{background:#F1A94D;color:#141414 !important;font-weight:700;padding:15px 22px;border-radius:999px;font-size:15px}
+.vbb .b2{border:1px solid #5C5852;color:#fff !important;font-weight:600;padding:15px 22px;border-radius:999px;font-size:15px}
+.vbb .empty{font-size:17px;color:#5C5852;padding:8px 0 24px}
+.vbb .sk{background:#EFE7DA;border-radius:14px;aspect-ratio:16/10}
+@media (max-width:960px){.vbb .feat{grid-template-columns:1fr}.vbb .grid{grid-template-columns:repeat(2,1fr)}.vbb .cta{grid-template-columns:1fr}.vbb .btns{justify-content:flex-start}}
+@media (max-width:640px){.vbb .w{padding:0 20px}.vbb .hero{padding:48px 0 28px}.vbb h1{font-size:38px}.vbb .fh{font-size:26px}.vbb .grid{grid-template-columns:1fr;gap:32px}.vbb .tb{flex-direction:column;align-items:stretch}.vbb .srch{width:100%}.vbb .cta{padding:32px 24px}.vbb .cta .q{font-size:24px}.vbb .si{grid-template-columns:88px 1fr}}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<section class="hero"><div class="w">
+<div class="eb">The Vybrant Blog</div>
+<h1>Clear answers about hormones, weight and how you feel.</h1>
+<p class="lede">Plain-language articles written and reviewed by Alfred Tetteh, FNP-C, so you can walk into your visit with better questions.</p>
+<div class="tb">
+<div class="chips" id="vbb-chips" role="group" aria-label="Filter articles by topic"></div>
+<input class="srch" id="vbb-q" type="search" placeholder="Search articles" aria-label="Search articles">
+</div>
+</div></section>
+
+<div class="w">
+<div id="vbb-feat"></div>
+<div class="gh"><h2 id="vbb-gt">More articles</h2><span class="dt" id="vbb-count"></span></div>
+<div class="grid" id="vbb-grid"><div class="sk"></div><div class="sk"></div><div class="sk"></div></div>
+<button type="button" class="lm" id="vbb-more" hidden>Load more articles</button>
+<div class="cta">
+<div><div class="eb">Not sure where to start?</div><div class="q">Talk it through with a clinician who looks at the whole picture.</div></div>
+<div class="btns"><a class="b1" id="vbb-book" href="/contact/">Book a free discovery call</a><a class="b2" href="tel:4107024998">410-702-4998</a></div>
+</div>
+</div>
+
+<script>
+(function(){
+  var root=document.getElementById('vbb'); if(!root||root.dataset.ready)return; root.dataset.ready='1';
+  var hb=document.querySelector('[data-elementor-type="header"] a.elementor-button');
+  if(hb&&/discovery/i.test(hb.textContent)){var bk=document.getElementById('vbb-book');bk.href=hb.href;if(hb.target)bk.target=hb.target;}
+  var CATS=[{k:'all',l:'All articles'},{k:'womens-health',l:'Women’s health'},{k:'mens-health',l:'Men’s health'},{k:'medical-weight-loss',l:'Weight loss & GLP-1'},{k:'nutrition-metabolic-health',l:'Nutrition & metabolism'},{k:'peptide-therapy',l:'Peptide therapy'}];
+  var LBL={};CATS.forEach(function(c){LBL[c.k]=c.l;});
+  var st={cat:'all',q:'',limit:9},posts=[];
+  function esc(s){return String(s||'').replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  function txt(h){var d=document.createElement('div');d.innerHTML=h||'';return (d.textContent||'').replace(/\s+/g,' ').trim();}
+  function fmt(d){return new Date(d).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});}
+  function img(p,size){var m=p._embedded&&p._embedded['wp:featuredmedia']&&p._embedded['wp:featuredmedia'][0];if(!m||!m.source_url)return '';var s=m.media_details&&m.media_details.sizes;return (s&&((size&&s[size])||s.medium_large||s.large)||m).source_url;}
+  function norm(p){var terms=(p._embedded&&p._embedded['wp:term']&&p._embedded['wp:term'][0])||[];var c=terms.filter(function(t){return LBL[t.slug];})[0]||terms[0]||{};
+    return {t:txt(p.title.rendered),u:p.link,d:fmt(p.date),c:c.slug||'',cl:LBL[c.slug]||c.name||'',x:txt(p.excerpt.rendered).replace(/\s*(\[…\]|\[&hellip;\]|…)$/,'').slice(0,220),i:img(p),im:img(p,'medium')};}
+  function chips(){document.getElementById('vbb-chips').innerHTML=CATS.filter(function(c){return c.k==='all'||posts.some(function(p){return p.c===c.k;});}).map(function(c){return '<button type="button" class="chip" data-k="'+c.k+'" aria-pressed="'+(st.cat===c.k)+'">'+esc(c.l)+'</button>';}).join('');}
+  function card(p){return '<a class="card" href="'+esc(p.u)+'"><div class="img" style="aspect-ratio:16/10;border-radius:14px;margin-bottom:16px">'+(p.i?'<img loading="lazy" src="'+esc(p.i)+'" alt="">':'')+'</div><div class="cat">'+esc(p.cl)+'</div><h3 class="ct c2">'+esc(p.t)+'</h3><div class="dt">'+esc(p.d)+'</div></a>';}
+  function render(){
+    var browsing=st.cat==='all'&&!st.q, q=st.q.toLowerCase();
+    var list=posts.filter(function(p){return (st.cat==='all'||p.c===st.cat)&&(!q||(p.t+' '+p.cl+' '+p.x).toLowerCase().indexOf(q)>-1);});
+    var feat=document.getElementById('vbb-feat');
+    if(browsing&&posts.length>4){var f=posts[0];
+      feat.innerHTML='<div class="feat"><a class="card" href="'+esc(f.u)+'"><div class="img" style="aspect-ratio:16/9;border-radius:16px">'+(f.i?'<img src="'+esc(f.i)+'" alt="">':'')+'</div><div style="padding-top:22px"><div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:12px"><span class="tag">Latest</span><span class="cat" style="font-size:13px">'+esc(f.cl)+'</span><span class="dt" style="font-size:13px">· '+esc(f.d)+'</span></div><h2 class="fh ct">'+esc(f.t)+'</h2><p class="fx c2">'+esc(f.x)+'</p><span class="more">Read article →</span></div></a><div><div class="sh">Also new</div>'+
+      posts.slice(1,4).map(function(p){return '<a class="si" href="'+esc(p.u)+'"><div class="img" style="aspect-ratio:1/1;border-radius:10px">'+(p.im||p.i?'<img loading="lazy" src="'+esc(p.im||p.i)+'" alt="">':'')+'</div><div><div class="cat">'+esc(p.cl)+'</div><div class="st c2">'+esc(p.t)+'</div><div class="dt" style="font-size:13px">'+esc(p.d)+'</div></div></a>';}).join('')+'</div></div>';
+    } else feat.innerHTML='';
+    var rest=browsing&&posts.length>4?list.slice(4):list;
+    document.getElementById('vbb-gt').textContent=st.q?'Search results':(browsing?'More articles':LBL[st.cat]);
+    document.getElementById('vbb-count').textContent=rest.length+(rest.length===1?' article':' articles');
+    document.getElementById('vbb-grid').innerHTML=rest.length?rest.slice(0,st.limit).map(card).join(''):'<p class="empty" style="grid-column:1/-1">No articles match that yet. Try another word or topic.</p>';
+    document.getElementById('vbb-more').hidden=rest.length<=st.limit;
+  }
+  root.addEventListener('click',function(e){var b=e.target.closest('.chip');if(b){st.cat=b.dataset.k;st.limit=9;chips();render();}});
+  document.getElementById('vbb-more').addEventListener('click',function(){st.limit+=9;render();});
+  var tm;document.getElementById('vbb-q').addEventListener('input',function(e){clearTimeout(tm);tm=setTimeout(function(){st.q=e.target.value.trim();st.limit=9;render();},150);});
+  fetch('/wp-json/wp/v2/posts?per_page=100&_embed=wp:featuredmedia,wp:term').then(function(r){return r.json();}).then(function(d){posts=(d||[]).map(norm);chips();render();})
+  .catch(function(){document.getElementById('vbb-grid').innerHTML='<p class="empty">Articles could not load. Please refresh the page.</p>';});
+})();
+</script>
+<noscript><p style="max-width:1200px;margin:0 auto;padding:24px 32px">Please enable JavaScript to browse articles.</p></noscript>
+</div>
